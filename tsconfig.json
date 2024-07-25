@@ -1,0 +1,11 @@
+{
+  "extends": "@getcommunity/config-typescript/ts-lib.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "dist",
+    "target": "ES6",
+    "declaration": true
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["dist", "node_modules"]
+}

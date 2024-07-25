@@ -1,0 +1,55 @@
+{
+  "name": "@getcommunity/email-builder",
+  "description": "A collection of utilities for developing mobile responsive HTML email templates.",
+  "version": "0.0.7",
+  "author": "@GetCommunity",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mjml": "^4.15.3",
+    "nodemailer": "^6.9.14",
+    "yaml": "^2.4.5"
+  },
+  "devDependencies": {
+    "@getcommunity/client-styleguides": "workspace:*",
+    "@getcommunity/config-eslint": "workspace:*",
+    "@getcommunity/config-prettier": "workspace:*",
+    "@getcommunity/config-typescript": "workspace:*",
+    "@types/mjml": "^4.7.4",
+    "@types/node": "^20.14.12",
+    "@types/nodemailer": "^6.4.15",
+    "eslint": "9.7.0",
+    "tsup": "^8.2.2",
+    "typescript": "^5.5.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "license": "ISC",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getcommunity/email-builder.git"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "format": "prettier --write \"./src/**/*.{ts,tsx,md}\"",
+    "lint": "eslint ./src/**/*",
+    "preview": "tsup --watch",
+    "typecheck": "tsc --noEmit ./src/**/*"
+  },
+  "type": "commonjs",
+  "types": "./dist/index.d.ts"
+}
