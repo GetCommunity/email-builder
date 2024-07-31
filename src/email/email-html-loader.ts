@@ -28,7 +28,7 @@ export function loadFileByName(
   filename: string,
   isHtml: boolean = true
 ): FileDataResult {
-  let fileData: FileDataResult = {
+  const fileData: FileDataResult = {
     error: true,
     message: '',
     path: '',
@@ -53,10 +53,14 @@ export function loadFileByName(
     fileData.error = false;
     fileData.content = file_content;
     fileData.message = '';
-  } catch (error: Error | any) {
+  } catch (error: unknown) {
     fileData.error = true;
     fileData.content = '';
-    fileData.message = error?.message ?? 'An error occurred.';
+    if (error instanceof Error) {
+      fileData.message = error.message;
+    } else {
+      fileData.message = 'An error occurred.';
+    }
   }
   return fileData;
 }
@@ -70,7 +74,7 @@ export function saveFileByName(
   content: string,
   isHtml: boolean = true
 ): FileDataResult {
-  let fileData: FileDataResult = {
+  const fileData: FileDataResult = {
     error: true,
     message: '',
     path: '',
@@ -89,9 +93,13 @@ export function saveFileByName(
     fs.writeFileSync(__filepath, content);
     fileData.error = false;
     fileData.message = '';
-  } catch (error: Error | any) {
+  } catch (error: unknown) {
     fileData.error = true;
-    fileData.message = error?.message ?? 'An error occurred.';
+    if (error instanceof Error) {
+      fileData.message = error.message;
+    } else {
+      fileData.message = 'An error occurred.';
+    }
   }
   return fileData;
 }

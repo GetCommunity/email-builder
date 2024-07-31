@@ -77,7 +77,7 @@ export type MjmlToHtmlResult = {
  * @description Process an mjml file to html
  */
 export function processMjmlFile(file: string): MjmlToHtmlResult {
-  let result = {
+  const result = {
     error: true,
     message: '',
     client: '',
@@ -120,7 +120,7 @@ export function getVariationFilename(
   baseFilename: string,
   variationKey: string
 ): string {
-  let variationName = baseFilename.split('.').slice(0, -1);
+  const variationName = baseFilename.split('.').slice(0, -1);
   variationName.push(variationKey);
   return variationName.join('_') + '.html';
 }

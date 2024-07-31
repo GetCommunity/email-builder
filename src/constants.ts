@@ -66,7 +66,7 @@ export const CONFIG: GCEmailConfig = {
       ? (process.env.RENDER_MODE as GCEmailRenderMode)
       : 'updated'
     : 'updated',
-  email: parse(fs.readFileSync(`${ROOT}/config.yml`, 'utf8')),
+  email: parse(fs.readFileSync(`${ROOT}/config.yml`, 'utf8')) as TestConfig,
 };
 
 export const ROOT_MJML = `${CONFIG.root}/${CONFIG.mjml}`;

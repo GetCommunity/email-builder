@@ -10,13 +10,13 @@ import { MjmlToHtmlResult, loadFiles, processMjmlFile } from './index.js';
  */
 export function renderNewMjmlToHtml(): MjmlToHtmlResult[] {
   let mjmlFiles = loadFiles(ROOT_MJML, 'mjml', []);
-  let htmlFiles = loadFiles(ROOT_HTML, 'html', []);
+  const htmlFiles = loadFiles(ROOT_HTML, 'html', []);
   mjmlFiles = mjmlFiles.filter((mjmlFile) => {
     let htmlFile = mjmlFile.replace('mjml', 'html');
     htmlFile = htmlFile.replace('.mjml', '.html');
     return !htmlFiles.includes(htmlFile);
   });
-  let renderedFiles = mjmlFiles.map(processMjmlFile);
+  const renderedFiles = mjmlFiles.map(processMjmlFile);
   return renderedFiles;
 }
 
@@ -27,7 +27,7 @@ export function renderNewMjmlToHtml(): MjmlToHtmlResult[] {
  * @returns {MjmlToHtmlResult[]} list of rendered file results
  */
 export function renderAllMjmlToHtml(): MjmlToHtmlResult[] {
-  let mjmlFiles = loadFiles(ROOT_MJML, 'mjml', []);
-  let renderedFiles = mjmlFiles.map(processMjmlFile);
+  const mjmlFiles = loadFiles(ROOT_MJML, 'mjml', []);
+  const renderedFiles = mjmlFiles.map(processMjmlFile);
   return renderedFiles;
 }

@@ -15,9 +15,9 @@ export function generateEmailHtmlLinkVariations(
 ): TestVariation[] {
   const testHtml = loadFileByName(client, filename, true);
   if (testHtml.error) throw new Error(testHtml.message);
-  let htmlVariations: TestVariation[] = [];
+  const htmlVariations: TestVariation[] = [];
   for (let i = 0; i < variations.length; i++) {
-    let variation = variations[i];
+    const variation = variations[i];
     const variationName = getVariationFilename(filename, variation.key);
     const variationUtmLink = generateUtmLinkVariation(
       variation.campaign,
@@ -41,9 +41,9 @@ export function loadEmailHtmlLinkVariations(
   filename: string,
   variations: EmailVariation[]
 ): TestVariation[] {
-  let htmlVariations: TestVariation[] = [];
+  const htmlVariations: TestVariation[] = [];
   for (let i = 0; i < variations.length; i++) {
-    let variation = variations[i];
+    const variation = variations[i];
     const variationName = getVariationFilename(filename, variation.key);
     const data = loadFileByName(client, variationName, true);
     htmlVariations.push({ data, variation });

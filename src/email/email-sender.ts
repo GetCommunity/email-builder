@@ -1,4 +1,5 @@
 import { Transporter } from 'nodemailer';
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
 
 export type MailOptions = {
   from: string;
@@ -21,7 +22,7 @@ export const subjectPrefix = process.env.GMAIL_SUBJECT_PREFIX ?? 'Preview Test E
  */
 export async function sendEmail(
   mailOptions: MailOptions,
-  transport: Transporter
+  transport: Transporter<SMTPTransport.SentMessageInfo>
 ): Promise<MailResult> {
   const sendMailOptions = {
     from: mailOptions.from,
@@ -29,15 +30,15 @@ export async function sendEmail(
     subject: subjectPrefix + ' - ' + mailOptions.subject,
     html: mailOptions.html,
   };
-  let result = {
+  const result = {
     error: true,
     message: 'Email not sent',
     to: mailOptions.to,
     subject: mailOptions.subject,
   };
   const emailResponse = await transport.sendMail(sendMailOptions);
-  if (emailResponse.error) {
-    result.message = 'Error: ' + emailResponse.error;
+  if (emailResponse.rejected) {
+    result.message = 'SMTP Error: ' + emailResponse.response;
   } else {
     result.error = false;
     result.message = 'Email sent: ' + emailResponse.response;

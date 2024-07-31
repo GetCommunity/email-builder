@@ -10,7 +10,7 @@ export type MjmlBuildResult = {
  * @description render the mjml file to html
  */
 export function compileMjmlHtml(fileContent: string): MjmlBuildResult {
-  let htmlBuild = {
+  const htmlBuild = {
     error: true,
     message: '',
     html: '',
