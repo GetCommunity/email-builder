@@ -42,11 +42,11 @@
     "url": "git+https://github.com/getcommunity/email-builder.git"
   },
   "scripts": {
+    "preview": "tsup --watch",
     "build": "tsup",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "format": "prettier --write \"./src/**/*.{ts,tsx,md}\"",
     "lint": "eslint ./src",
-    "preview": "tsup --watch",
     "typecheck": "tsc --noEmit ./src/**/*"
   },
   "type": "commonjs",
