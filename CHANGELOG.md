@@ -1,5 +1,11 @@
 # @getcommunity/email-builder
 
+## 0.0.11
+
+### Patch Changes
+
+- 73ec2ca: added html minification
+
 ## 0.0.10
 
 ### Patch Changes
