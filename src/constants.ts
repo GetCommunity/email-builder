@@ -30,7 +30,7 @@ export type TestConfig = {
   client: string;
   jobs: EmailJob[];
   test_group: keyof EmailTestGroup;
-  testers: EmailTestGroup[];
+  testers: EmailTestGroup;
 };
 
 export type GCEmailRenderMode = 'all' | 'new' | 'updated';
