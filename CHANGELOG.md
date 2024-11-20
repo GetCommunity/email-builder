@@ -1,5 +1,11 @@
 # @getcommunity/email-builder
 
+## 0.0.12
+
+### Patch Changes
+
+- 3f2dafd: updated package dependencies
+
 ## 0.0.11
 
 ### Patch Changes
