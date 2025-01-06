@@ -19,7 +19,10 @@ export function compileMjmlHtml(fileContent: string): MjmlBuildResult {
   htmlOutput = mjml2html(fileContent);
   if (htmlOutput && htmlOutput.errors.length > 0) {
     htmlBuild.error = true;
-    htmlBuild.message = htmlOutput.errors.join('\n');
+    htmlBuild.message = '';
+    htmlOutput.errors.forEach((error) => {
+      htmlBuild.message += `Error: ${error.message} at line ${error.line} \n`;
+    });
   } else {
     htmlBuild.error = false;
     htmlBuild.message = 'MJML file compiled successfully';

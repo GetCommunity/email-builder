@@ -1,7 +1,7 @@
 {
   "name": "@getcommunity/email-builder",
   "description": "A collection of utilities for developing mobile responsive HTML email templates.",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "@GetCommunity <ryan@getcommunity.com> (https://github.com/GetCommunity)",
   "contributors": [
     "Joey Grable <joey@getcommunity.com> (https://joeygrable.com)"
@@ -23,7 +23,7 @@
     "@types/node": "^20.17.6",
     "@types/nodemailer": "^6.4.17",
     "tsup": "^8.3.5",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "exports": {
     ".": {
