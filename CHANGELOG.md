@@ -1,5 +1,11 @@
 # @getcommunity/email-builder
 
+## 0.1.0
+
+### Minor Changes
+
+- simplified utm link variations
+
 ## 0.0.13
 
 ### Patch Changes

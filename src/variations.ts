@@ -19,11 +19,7 @@ export function generateEmailHtmlLinkVariations(
   for (let i = 0; i < variations.length; i++) {
     const variation = variations[i];
     const variationName = getVariationFilename(filename, variation.key);
-    const variationUtmLink = generateUtmLinkVariation(
-      variation.campaign,
-      variation.medium,
-      variation.source
-    );
+    const variationUtmLink = generateUtmLinkVariation(variation.utm);
     const variationHtml = testHtml.content.replace(UTM_REGEX, variationUtmLink);
     const data: FileDataResult = saveFileByName(
       client,

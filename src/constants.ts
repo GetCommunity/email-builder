@@ -3,9 +3,10 @@ import fs from 'fs';
 import { parse } from 'yaml';
 
 export type UTMKeys = {
-  campaign: string;
-  medium: string;
-  source: string;
+  utm: string;
+  // campaign: string;
+  // medium: string;
+  // source: string;
 };
 
 export type EmailVariation = {
@@ -45,7 +46,7 @@ export type GCEmailConfig = {
 
 export const ROOT = process.env.PWD ?? process.cwd();
 
-export const UTM_REGEX = /\?UTMLINK/g;
+export const UTM_REGEX = /UTMLINK/g;
 
 export const RENDER_MODE_OPTIONS: GCEmailRenderMode[] = ['all', 'new', 'updated'];
 

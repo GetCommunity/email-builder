@@ -1,11 +1,13 @@
 import fs from 'fs';
 
 export function generateUtmLinkVariation(
-  campaign: string,
-  medium: string,
-  source: string
+  utm: string
+  // campaign: string,
+  // medium: string,
+  // source: string
 ): string {
-  return `?utm_campaign=${campaign}&utm_medium=${medium}&utm_source=${source}`;
+  // return `?utm_campaign=${campaign}&utm_medium=${medium}&utm_source=${source}`;
+  return utm;
 }
 
 export function extractLinksFromString(str: string, lower: boolean = false): string[] {
