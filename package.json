@@ -7,11 +7,11 @@
     "Joey Grable <joey@getcommunity.com> (https://joeygrable.com)"
   ],
   "dependencies": {
-    "dotenv": "^16.4.5",
+    "dotenv": "^17.2.0",
     "html-minifier": "^4.0.0",
     "mjml": "^4.15.3",
-    "nodemailer": "^6.9.16",
-    "yaml": "^2.6.1"
+    "nodemailer": "^7.0.5",
+    "yaml": "^2.8.0"
   },
   "devDependencies": {
     "@getcommunity/client-styleguides": "workspace:*",
@@ -20,10 +20,10 @@
     "@getcommunity/config-typescript": "workspace:*",
     "@types/html-minifier": "^4.0.5",
     "@types/mjml": "^4.7.4",
-    "@types/node": "^20.19.9",
+    "@types/node": "^24.0.15",
     "@types/nodemailer": "^6.4.17",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "tsup": "^8.5.0",
+    "typescript": "^5.8"
   },
   "exports": {
     ".": {
