@@ -14,6 +14,7 @@
     "yaml": "^2.8.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.30.1",
     "@getcommunity/client-styleguides": "*",
     "@getcommunity/config-eslint": "*",
     "@getcommunity/config-prettier": "*",
@@ -23,7 +24,8 @@
     "@types/node": "^24.0.15",
     "@types/nodemailer": "^6.4.17",
     "tsup": "^8.5.0",
-    "typescript": "^5.8"
+    "typescript": "^5.8",
+    "typescript-eslint": "^8.37.0"
   },
   "exports": {
     ".": {
