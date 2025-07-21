@@ -20,7 +20,7 @@
     "@getcommunity/config-typescript": "workspace:*",
     "@types/html-minifier": "^4.0.5",
     "@types/mjml": "^4.7.4",
-    "@types/node": "^20.17.6",
+    "@types/node": "^20.19.9",
     "@types/nodemailer": "^6.4.17",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"

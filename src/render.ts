@@ -1,5 +1,5 @@
-import { ROOT_HTML, ROOT_MJML } from './constants.js';
-import { MjmlToHtmlResult, loadFiles, processMjmlFile } from './index.js';
+import { ROOT_HTML, ROOT_MJML } from "./constants.js"
+import { MjmlToHtmlResult, loadFiles, processMjmlFile } from "./index.js"
 
 /**
  * @description render new mjml files to html files:
@@ -9,15 +9,15 @@ import { MjmlToHtmlResult, loadFiles, processMjmlFile } from './index.js';
  * @returns {MjmlToHtmlResult[]} list of rendered file results
  */
 export function renderNewMjmlToHtml(): MjmlToHtmlResult[] {
-  let mjmlFiles = loadFiles(ROOT_MJML, 'mjml', []);
-  const htmlFiles = loadFiles(ROOT_HTML, 'html', []);
+  let mjmlFiles = loadFiles(ROOT_MJML, "mjml", [])
+  const htmlFiles = loadFiles(ROOT_HTML, "html", [])
   mjmlFiles = mjmlFiles.filter((mjmlFile) => {
-    let htmlFile = mjmlFile.replace('mjml', 'html');
-    htmlFile = htmlFile.replace('.mjml', '.html');
-    return !htmlFiles.includes(htmlFile);
-  });
-  const renderedFiles = mjmlFiles.map(processMjmlFile);
-  return renderedFiles;
+    let htmlFile = mjmlFile.replace("mjml", "html")
+    htmlFile = htmlFile.replace(".mjml", ".html")
+    return !htmlFiles.includes(htmlFile)
+  })
+  const renderedFiles = mjmlFiles.map(processMjmlFile)
+  return renderedFiles
 }
 
 /**
@@ -27,7 +27,7 @@ export function renderNewMjmlToHtml(): MjmlToHtmlResult[] {
  * @returns {MjmlToHtmlResult[]} list of rendered file results
  */
 export function renderAllMjmlToHtml(): MjmlToHtmlResult[] {
-  const mjmlFiles = loadFiles(ROOT_MJML, 'mjml', []);
-  const renderedFiles = mjmlFiles.map(processMjmlFile);
-  return renderedFiles;
+  const mjmlFiles = loadFiles(ROOT_MJML, "mjml", [])
+  const renderedFiles = mjmlFiles.map(processMjmlFile)
+  return renderedFiles
 }

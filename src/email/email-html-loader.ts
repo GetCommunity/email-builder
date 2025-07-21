@@ -1,22 +1,22 @@
-import fs from 'fs';
-import path from 'path';
-import { ROOT_HTML, ROOT_MJML } from '../constants.js';
+import fs from "fs"
+import path from "path"
+import { ROOT_HTML, ROOT_MJML } from "../constants.js"
 
 export type FileDataResult = {
-  error: boolean;
-  message: string;
-  path: string;
-  filename: string;
-  content: string;
-};
+  error: boolean
+  message: string
+  path: string
+  filename: string
+  content: string
+}
 
 /**
  * @description Create directories if they do not exist
  */
 export function createDirsIfNotExists(filepath: string) {
-  const dir = path.dirname(filepath);
+  const dir = path.dirname(filepath)
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+    fs.mkdirSync(dir, { recursive: true })
   }
 }
 
@@ -30,39 +30,39 @@ export function loadFileByName(
 ): FileDataResult {
   const fileData: FileDataResult = {
     error: true,
-    message: '',
-    path: '',
+    message: "",
+    path: "",
     filename: filename,
-    content: '',
-  };
+    content: ""
+  }
   try {
     if (!filename) {
-      throw new Error('Filename is required');
+      throw new Error("Filename is required")
     }
     if (!client) {
-      throw new Error('Client is required');
+      throw new Error("Client is required")
     }
-    let __filepath = '';
+    let __filepath = ""
     if (isHtml) {
-      __filepath = path.join(ROOT_HTML, client, filename);
+      __filepath = path.join(ROOT_HTML, client, filename)
     } else {
-      __filepath = path.join(ROOT_MJML, client, filename);
+      __filepath = path.join(ROOT_MJML, client, filename)
     }
-    const file_content = fs.readFileSync(__filepath, 'utf8');
-    fileData.path = __filepath;
-    fileData.error = false;
-    fileData.content = file_content;
-    fileData.message = '';
+    const file_content = fs.readFileSync(__filepath, "utf8")
+    fileData.path = __filepath
+    fileData.error = false
+    fileData.content = file_content
+    fileData.message = ""
   } catch (error: unknown) {
-    fileData.error = true;
-    fileData.content = '';
+    fileData.error = true
+    fileData.content = ""
     if (error instanceof Error) {
-      fileData.message = error.message;
+      fileData.message = error.message
     } else {
-      fileData.message = 'An error occurred.';
+      fileData.message = "An error occurred."
     }
   }
-  return fileData;
+  return fileData
 }
 
 /**
@@ -76,30 +76,30 @@ export function saveFileByName(
 ): FileDataResult {
   const fileData: FileDataResult = {
     error: true,
-    message: '',
-    path: '',
+    message: "",
+    path: "",
     filename: filename,
-    content: content,
-  };
+    content: content
+  }
   try {
-    let __filepath = '';
+    let __filepath = ""
     if (isHtml) {
-      __filepath = path.join(ROOT_HTML, client, filename);
+      __filepath = path.join(ROOT_HTML, client, filename)
     } else {
-      __filepath = path.join(ROOT_MJML, client, filename);
+      __filepath = path.join(ROOT_MJML, client, filename)
     }
-    fileData.path = __filepath;
-    createDirsIfNotExists(__filepath);
-    fs.writeFileSync(__filepath, content);
-    fileData.error = false;
-    fileData.message = '';
+    fileData.path = __filepath
+    createDirsIfNotExists(__filepath)
+    fs.writeFileSync(__filepath, content)
+    fileData.error = false
+    fileData.message = ""
   } catch (error: unknown) {
-    fileData.error = true;
+    fileData.error = true
     if (error instanceof Error) {
-      fileData.message = error.message;
+      fileData.message = error.message
     } else {
-      fileData.message = 'An error occurred.';
+      fileData.message = "An error occurred."
     }
   }
-  return fileData;
+  return fileData
 }
