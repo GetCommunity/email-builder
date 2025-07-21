@@ -23,6 +23,7 @@
     "@types/mjml": "^4.7.4",
     "@types/node": "^24.0.15",
     "@types/nodemailer": "^6.4.17",
+    "prettier-plugin-organize-imports": "^4.1.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8",
     "typescript-eslint": "^8.37.0"

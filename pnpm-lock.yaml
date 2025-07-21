@@ -49,6 +49,9 @@ devDependencies:
   '@types/nodemailer':
     specifier: ^6.4.17
     version: 6.4.17
+  prettier-plugin-organize-imports:
+    specifier: ^4.1.0
+    version: 4.1.0(prettier@3.6.2)(typescript@5.8.3)
   tsup:
     specifier: ^8.5.0
     version: 8.5.0(typescript@5.8.3)(yaml@2.8.0)
@@ -2322,6 +2325,26 @@ packages:
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier-plugin-organize-imports@4.1.0(prettier@3.6.2)(typescript@5.8.3):
+    resolution: {integrity: sha512-5aWRdCgv645xaa58X8lOxzZoiHAldAPChljr/MT0crXVOWTZ+Svl4hIWlz+niYSlO6ikE5UXkN1JrRvIP2ut0A==}
+    peerDependencies:
+      prettier: '>=2.0'
+      typescript: '>=2.9'
+      vue-tsc: ^2.1.0
+    peerDependenciesMeta:
+      vue-tsc:
+        optional: true
+    dependencies:
+      prettier: 3.6.2
+      typescript: 5.8.3
+    dev: true
+
+  /prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /proto-list@1.2.4:

@@ -6,6 +6,6 @@
     "target": "ES6",
     "declaration": true
   },
-  "include": ["./src/**/*", "eslint.config.mjs"],
+  "include": ["./src/**/*", "eslint.config.mjs", "tsup.config.ts", ".prettierrc.mjs"],
   "exclude": ["dist", "node_modules"]
 }

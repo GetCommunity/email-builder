@@ -17,5 +17,11 @@ export default tseslint.config(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+  },
+  {
+    ignores: [
+      ".prettierrc.mjs",
+      "*.config.*",
+    ]
   }
 );
