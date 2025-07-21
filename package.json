@@ -14,10 +14,10 @@
     "yaml": "^2.8.0"
   },
   "devDependencies": {
-    "@getcommunity/client-styleguides": "workspace:*",
-    "@getcommunity/config-eslint": "workspace:*",
-    "@getcommunity/config-prettier": "workspace:*",
-    "@getcommunity/config-typescript": "workspace:*",
+    "@getcommunity/client-styleguides": "*",
+    "@getcommunity/config-eslint": "*",
+    "@getcommunity/config-prettier": "*",
+    "@getcommunity/config-typescript": "*",
     "@types/html-minifier": "^4.0.5",
     "@types/mjml": "^4.7.4",
     "@types/node": "^24.0.15",
