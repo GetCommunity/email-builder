@@ -7,26 +7,26 @@
     "Joey Grable <joey@getcommunity.com> (https://joeygrable.com)"
   ],
   "dependencies": {
-    "dotenv": "^17.2.0",
+    "dotenv": "^17.2.3",
     "html-minifier": "^4.0.0",
-    "mjml": "^4.15.3",
-    "nodemailer": "^7.0.5",
-    "yaml": "^2.8.0"
+    "mjml": "^4.16.1",
+    "nodemailer": "^7.0.10",
+    "yaml": "^2.8.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.30.1",
-    "@getcommunity/client-styleguides": "^0.0.17",
-    "@getcommunity/config-eslint": "^0.0.15",
-    "@getcommunity/config-prettier": "^0.0.10",
+    "@eslint/js": "^9.38.0",
+    "@getcommunity/client-styleguides": "^0.0.18",
+    "@getcommunity/config-eslint": "^0.0.16",
+    "@getcommunity/config-prettier": "^0.0.11",
     "@getcommunity/config-typescript": "^0.0.10",
-    "@types/html-minifier": "^4.0.5",
+    "@types/html-minifier": "^4.0.6",
     "@types/mjml": "^4.7.4",
     "@types/node": "^22.15.19",
-    "@types/nodemailer": "^6.4.17",
-    "prettier-plugin-organize-imports": "^4.1.0",
+    "@types/nodemailer": "^7.0.3",
+    "prettier-plugin-organize-imports": "^4.3.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8",
-    "typescript-eslint": "^8.37.0"
+    "typescript-eslint": "^8.46.2"
   },
   "exports": {
     ".": {
