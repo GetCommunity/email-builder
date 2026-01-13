@@ -9,24 +9,24 @@
   "dependencies": {
     "dotenv": "^17.2.3",
     "html-minifier": "^4.0.0",
-    "mjml": "^4.17.1",
-    "nodemailer": "^7.0.11",
+    "mjml": "^4.18.0",
+    "nodemailer": "^7.0.12",
     "yaml": "^2.8.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@getcommunity/client-styleguides": "^0.0.21",
-    "@getcommunity/config-eslint": "^0.0.18",
-    "@getcommunity/config-prettier": "^0.0.12",
-    "@getcommunity/config-typescript": "^0.0.12",
+    "@eslint/js": "^9.39.2",
+    "@getcommunity/client-styleguides": "^0.0.23",
+    "@getcommunity/config-eslint": "^0.0.20",
+    "@getcommunity/config-prettier": "^0.0.13",
+    "@getcommunity/config-typescript": "^0.0.13",
     "@types/html-minifier": "^4.0.6",
     "@types/mjml": "^4.7.4",
     "@types/node": "^22.19.1",
-    "@types/nodemailer": "^7.0.4",
+    "@types/nodemailer": "^7.0.5",
     "prettier-plugin-organize-imports": "^4.3.0",
     "tsup": "^8.5.1",
     "typescript": "^5.8",
-    "typescript-eslint": "^8.48.1"
+    "typescript-eslint": "^8.53.0"
   },
   "exports": {
     ".": {
