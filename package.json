@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
-    "@getcommunity/client-styleguides": "^0.0.23",
+    "@getcommunity/client-styleguides": "^0.0.24",
     "@getcommunity/config-eslint": "^0.0.20",
     "@getcommunity/config-prettier": "^0.0.13",
     "@getcommunity/config-typescript": "^0.0.13",
@@ -23,6 +23,7 @@
     "@types/mjml": "^4.7.4",
     "@types/node": "^22.19.1",
     "@types/nodemailer": "^7.0.5",
+    "eslint": "^9.39.2",
     "prettier-plugin-organize-imports": "^4.3.0",
     "tsup": "^8.5.1",
     "typescript": "^5.8",
