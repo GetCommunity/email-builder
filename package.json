@@ -15,9 +15,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
-    "@getcommunity/client-styleguides": "^0.0.24",
-    "@getcommunity/config-eslint": "^0.0.20",
-    "@getcommunity/config-prettier": "^0.0.13",
+    "@getcommunity/client-styleguides": "^0.0.25",
+    "@getcommunity/config-eslint": "^0.0.21",
+    "@getcommunity/config-prettier": "^0.0.14",
     "@getcommunity/config-typescript": "^0.0.13",
     "@types/html-minifier": "^4.0.6",
     "@types/mjml": "^4.7.4",
