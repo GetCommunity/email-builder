@@ -1,27 +1,20 @@
-import eslint from '@eslint/js';
-import { resolve } from 'path';
-import process from 'process';
-import tseslint from 'typescript-eslint';
+import eslint from "@eslint/js"
+import { defineConfig } from "eslint/config"
+import tseslint from "typescript-eslint"
 
-const tsProject = resolve(process.cwd(), 'tsconfig.json');
-
-export default tseslint.config(
+export default defineConfig(
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   {
     languageOptions: {
       parserOptions: {
-        parser: '@typescript-eslint/parser',
-        project: tsProject,
+        parser: "@typescript-eslint/parser",
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
+        tsconfigRootDir: import.meta.dirname
+      }
+    }
   },
   {
-    ignores: [
-      ".prettierrc.mjs",
-      "*.config.*",
-    ]
+    ignores: [".prettierrc.mjs", "*.config.*"]
   }
-);
+)

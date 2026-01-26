@@ -1,32 +1,33 @@
 {
   "name": "@getcommunity/email-builder",
   "description": "A collection of utilities for developing mobile responsive HTML email templates.",
-  "version": "0.1.2",
+  "version": "0.1.10",
   "author": "@GetCommunity <ryan@getcommunity.com> (https://github.com/GetCommunity)",
   "contributors": [
     "Joey Grable <joey@getcommunity.com> (https://joeygrable.com)"
   ],
   "dependencies": {
-    "dotenv": "^17.2.0",
+    "dotenv": "^17.2.3",
     "html-minifier": "^4.0.0",
-    "mjml": "^4.15.3",
-    "nodemailer": "^7.0.5",
-    "yaml": "^2.8.0"
+    "mjml": "^4.18.0",
+    "nodemailer": "^7.0.12",
+    "yaml": "^2.8.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.30.1",
-    "@getcommunity/client-styleguides": "^0.0.17",
-    "@getcommunity/config-eslint": "^0.0.15",
-    "@getcommunity/config-prettier": "^0.0.10",
-    "@getcommunity/config-typescript": "^0.0.10",
-    "@types/html-minifier": "^4.0.5",
+    "@eslint/js": "^9.39.2",
+    "@getcommunity/client-styleguides": "^0.0.26",
+    "@getcommunity/config-eslint": "^0.0.22",
+    "@getcommunity/config-prettier": "^0.0.15",
+    "@getcommunity/config-typescript": "^0.0.13",
+    "@types/html-minifier": "^4.0.6",
     "@types/mjml": "^4.7.4",
-    "@types/node": "^22.15.19",
-    "@types/nodemailer": "^6.4.17",
-    "prettier-plugin-organize-imports": "^4.1.0",
-    "tsup": "^8.5.0",
+    "@types/node": "^22.19.1",
+    "@types/nodemailer": "^7.0.5",
+    "eslint": "^9.39.2",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "tsup": "^8.5.1",
     "typescript": "^5.8",
-    "typescript-eslint": "^8.37.0"
+    "typescript-eslint": "^8.53.0"
   },
   "exports": {
     ".": {
